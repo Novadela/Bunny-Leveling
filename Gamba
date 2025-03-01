@@ -51,7 +51,7 @@ int main() {
         cout << "Player ended the game Game" << endl;
 
         cout << endl;
-        cout << "Summary! << endl;
+        cout << "Summary!" << endl;
         cout << endl;
 
         // display a Roll Count message
@@ -72,7 +72,7 @@ int main() {
         cout << "Player out of money :(" << endl;
 
         cout << endl;
-        cout << "Summary! << endl;
+        cout << "Summary!" << endl;
         cout << endl;
 
         // display a Roll Count message
