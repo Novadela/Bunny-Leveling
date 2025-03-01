@@ -48,7 +48,11 @@ int main() {
     if (betUns == 0)
     {
         // display player ends game
-        cout << "Player ends Game" << endl;
+        cout << "Player ended the game Game" << endl;
+
+        cout << endl;
+        cout << "Summary! << endl;
+        cout << endl;
 
         // display a Roll Count message
         cout << "Roll Count :         " << rollCountUns << endl;
@@ -65,7 +69,11 @@ int main() {
     else
     {
         // display player out of money
-        cout << "Player out of money" << endl;
+        cout << "Player out of money :(" << endl;
+
+        cout << endl;
+        cout << "Summary! << endl;
+        cout << endl;
 
         // display a Roll Count message
         cout << "Roll Count :         " << rollCountUns << endl;
@@ -233,8 +241,8 @@ unsigned rollDemBonesFunc(unsigned& rollCountUns) {
 Name: evaluateRollFunc
 Function Purpose: Check for a winning roll, a losing roll, or a point roll result
                   Adjust stakeUns using betUns for win or loss result
-Function Design:  2, 3, 12      loses
-                  7, 11         winner
+Function Design:  2, 3, 12      loses - L
+                  7, 11         winner - W
                   anything else executes point rolls
 Inputs:           diceRollResultsUns - The dice roll sum
                   betUns             - The placed bet
@@ -249,7 +257,7 @@ void evaluateRollFunc(unsigned diceRollResultsUns, unsigned& rollCountUns, unsig
     {
         
         // Display a message saying the user lost
-        cout << "Sorry, you lose." << endl;
+        cout << "Sorry, you lose. *lmao*" << endl;
 
         cout << endl;
 
@@ -260,7 +268,7 @@ void evaluateRollFunc(unsigned diceRollResultsUns, unsigned& rollCountUns, unsig
     else if (diceRollResultsUns == 7 || diceRollResultsUns == 11)
     {
         // Display a message saying the user won
-        cout << "We've got ourselves a winner!" << endl;
+        cout << "We've got ourselves a winner! You received DOUBLE your bet! WOOO" << endl;
 
         cout << endl;
 
@@ -309,13 +317,13 @@ bool pointRollDemBonesFunc(unsigned pointUns, unsigned& rollCountUns) {
         
         if (pointRollUns == pointUns)
         {
-            cout << "We've got ourselves a winner!" << endl;
+            cout << "We've got ourselves a winner! You received DOUBLE your bet! WOOO" << endl;
             return (true);
         }
         
         else if (pointRollUns == 7)
         {
-            cout << "Sorry, you lose." << endl;
+            cout << "Sorry, you lose. *lmao*" << endl;
             return (false);
         }
         else
