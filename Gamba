@@ -25,6 +25,20 @@ int main() {
         rollCountUns = 0,
         diceRollResultsUns;
 
+    // Instructions.
+    cout << "This game uses two dice and your money >:)" << endl;
+    cout << "Guide:" << endl;
+    cout << endl;
+    cout << "The stake is the amount of money you brought to the casino." << endl;
+    cout << "Winning = Gain DOUBLE the amount of money placed on bet. :D" << endl;
+    cout << "Losing = Lose the amount of money placed on bet. >:Y" << endl;
+    cout << "Rolling a total of 2, 3, or 12 on the first roll of a bet is an INSTANT LOSS!" << endl;
+    cout << "Rolling a total of 7 or 11 on the first roll of a bet is an INSTANT WINNN!" << endl;
+    cout << "Rolling any other number will set that number to as a point (your goal total for the following rolls)" << endl;
+    cout << "After the first roll of a bet, rolling your point is a WIN! but rolling a 7 is a LOSS!" << endl;
+    cout << "You will keep rolling until you either roll your point or a 7. *good luck*" << endl;
+    cout << endl;
+
     // assign stakeUns result from askForInititalStakeAmountFunc();
     unsigned stakeUns = askForInititalStakeAmountFunc();
 
@@ -48,17 +62,17 @@ int main() {
     if (betUns == 0)
     {
         // display player ends game
-        cout << "Player ended the game Game" << endl;
+        cout << "Player has ended the Game" << endl;
 
         cout << endl;
         cout << "Summary!" << endl;
         cout << endl;
 
         // display a Roll Count message
-        cout << "Roll Count :         " << rollCountUns << endl;
+        cout << "Amount of rolls: " << rollCountUns << endl;
 
         // display a final stake amount message
-        cout << "Final Stake Amount : " << stakeUns << endl;
+        cout << "Final Stake Amount: $" << stakeUns << endl;
 
         // Hold the screen before exiting
 
@@ -69,17 +83,17 @@ int main() {
     else
     {
         // display player out of money
-        cout << "Player out of money :(" << endl;
+        cout << "Player is out of money :(" << endl;
 
         cout << endl;
         cout << "Summary!" << endl;
         cout << endl;
 
         // display a Roll Count message
-        cout << "Roll Count :         " << rollCountUns << endl;
+        cout << "Amount of rolls: " << rollCountUns << endl;
 
         // display a final stake amount message
-        cout << "Final Stake Amount : " << stakeUns << endl;
+        cout << "Final Stake Amount: $" << stakeUns << endl;
 
         // Hold the screen before exiting
         cout << endl;
@@ -107,7 +121,7 @@ unsigned askForInititalStakeAmountFunc() {
     do
     {
         // ask for stake amount
-        cout << "What is your stake amount ? ";
+        cout << "What is your stake amount? $";
         cin >> stakeStartUns;
 
         cout << endl;
@@ -148,7 +162,7 @@ unsigned askForBetDonePlayingFunc(unsigned& stakeUns) {
     int betStartUns;
 
     // display current stake amount
-    cout << "Current Stake Amount : " << stakeUns << endl;
+    cout << "Current Stake Amount: $" << stakeUns << endl;
 
     cout << endl;
 
@@ -156,7 +170,7 @@ unsigned askForBetDonePlayingFunc(unsigned& stakeUns) {
     do
     {
         // ask for a bet
-        cout << "What will you bet ? ";
+        cout << "What will you bet? $";
         cin >> betStartUns;
 
         cout << endl;
@@ -229,7 +243,7 @@ unsigned rollDemBonesFunc(unsigned& rollCountUns) {
 
     unsigned diceSum = roll1 + roll2;
 
-    cout << "The dice throw results : " << diceSum << " !" << endl;
+    cout << "The dice throw results: " << diceSum << "!" << endl;
 
     cout << endl;
 
